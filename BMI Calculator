@@ -1,0 +1,20 @@
+"BMI Calculator"
+
+print("Bienvenido al programa de Calculo IMC por Nebur Inc.")
+print("""
+Para determinar si una persona está por encima de su peso ideal o es demasiado delgada se utiliza el IMC o Índice de Masa Corporal, también conocido como BMI (Body Mass Index) o IQ (Índice de Quetelet).
+El cálculo es relativamente simple: consiste en dividir el peso, expresado en kilos, entre la estatura, en metros, elevada al cuadrado (kg/m2). El IMC resultante te indica si el peso es correcto en función de esa estatura, o si eres demasiado bajo o elevado.
+""")
+x=(int(input("Introduce tu Peso en Kg ")))
+y=(float(input("Introduce tu altura en M ")))
+z = round(float(x/(y**2)),2)
+print ("Tu BMI es:", z, "kg/m2")
+
+if z < float("18.5"):
+    print("Tu peso es considerado delgado")
+elif z>float("18.5") and z<float("24.5"):
+    print("Tu peso es considerado normal")
+elif z>float("24.5") and z<float("39.9"):
+    print("Tu peso es considerado obeso")
+elif z > int("40"):
+    print("Tu peso es considerado extremadamente obeso")
